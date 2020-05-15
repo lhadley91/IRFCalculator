@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>IRF Calculator</title>
+		<meta name="description" content="IRF Calculator">
+		<meta name="author" content="Lance Hadley">
+	</head>
+	<body>
+		<script src="assets/js/irfCalc.js"></script>
+		<h1>
+			IRF Calculator
+		</h1>
+		<p>
+			Designed to take a VAR system with substituted coefficients from Eviews and calculate the impulse responses. Creates IRFs for each variable.
+		</p>
+		<p>Decomposition method: residual - units (normally set to 1, but the model takes whatever you input in the input boxes)</p>
+		<div>
+			<textarea id="input" style="width:100%">Input System</textarea><br>
+			<button id="genVars">Generate System</button><button id="genCalcs">Calculate System</button><button id="genSample">Sample System</button><button id="resetButton">Reset</button>
+		</div>
+		<table id="outputTable">
+			<tr>
+				<td>Period</td>
+			</tr>
+		</table>
+		<p>
+			Press "Sample System" to see sample system format. Contact Lance Hadley for more details. <a href="https://www.linkedin.com/in/lance-hadley-84094233/">LinkedIn</a> <a href="https://www.researchgate.net/profile/Lance_Hadley2">ResearchGate</a> <a href="https://github.com/lhadley91/IRFCalculator">GitHub</a> 
+		</p>
+		<p>
+			See Wald Coefficients formatter for AR equations here.
+		</p>
+	</body>
+</html>
