@@ -3,33 +3,37 @@
 	<head>
 		<meta charset="utf-8">
 		<title>IRF Calculator</title>
-		<meta name="description" content="IRF Calculator">
+		<meta name="description" content="IRF Calculator - Takes a VAR system with substituted coefficients from Eviews and calculate the impulse responses.">
 		<meta name="author" content="Lance Hadley">
 	</head>
 	<body>
-		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-		<script src="assets/js/irfCalc.js"></script>
 		<h1>
 			IRF Calculator
 		</h1>
 		<p>
-			Designed to take a VAR system with substituted coefficients from Eviews and calculate the impulse responses. Creates IRFs for each variable.
+			Takes a VAR system with substituted coefficients from Eviews and calculate the impulse responses. Creates IRFs for each variable.
 		</p>
 		<p>Decomposition method: residual - units (normally set to 1, but the model takes whatever you input in the input boxes)</p>
+		<p>
+			Press "Sample System" to see sample system format, then "Generate Table" to populate system values/inputs. Then you will be able to set variable impulses.
+		</p>
+		<p>I built this specifically to generate IRFs after working with non-standard errors in Eviews (such as HAC).<br>
+		Contact Lance Hadley for more details. <a href="https://www.linkedin.com/in/lance-hadley-84094233/">LinkedIn</a> <a href="https://www.researchgate.net/profile/Lance_Hadley2">ResearchGate</a> <a href="https://github.com/lhadley91/IRFCalculator">GitHub</a>
+		</p>
 		<div>
-			<textarea id="input" style="width:100%">Input System</textarea><br>
-			<button id="genVars">Generate System</button><button id="genCalcs">Calculate System</button><button id="genSample">Sample System</button><button id="resetButton">Reset</button>
+			<textarea id="input" style="width:100%" rows='10'>Input system with substituted coefficients</textarea><br>
+			<button id="genVars">Generate Table</button><button id="genCalcs">Calculate Impulse Responses</button><button id="genSample">Sample System</button><button id="resetButton">Reset</button>
 		</div>
-		<table id="outputTable">
+		<table id="outputTable" style="border:1px solid black; margin-top:10px;">
 			<tr>
 				<td>Period</td>
 			</tr>
 		</table>
-		<p>
-			Press "Sample System" to see sample system format. Contact Lance Hadley for more details. <a href="https://www.linkedin.com/in/lance-hadley-84094233/">LinkedIn</a> <a href="https://www.researchgate.net/profile/Lance_Hadley2">ResearchGate</a> <a href="https://github.com/lhadley91/IRFCalculator">GitHub</a> 
-		</p>
+		
 		<p>
 			See Wald Coefficients formatter for AR equations here.
 		</p>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script src="assets/js/irfCalc.js"></script>
 	</body>
 </html>
